@@ -58,7 +58,7 @@ export default class extends Component {
           <FlatListSlider
             data={this.state.data}
             timer={2000}
-            onPress={item => alert(JSON.stringify(item))}
+            onPress={item => alert("Main")}
             indicatorContainerStyle={{position:'absolute', bottom: 20}}
             indicatorActiveColor={'#8e44ad'}
             indicatorInActiveColor={'#ffffff'}
@@ -69,7 +69,7 @@ export default class extends Component {
           <View style={styles.upperContainer}>
             <Text style={styles.upperText1}>ZERO WALLS FOR STUDIO</Text>
             <Text style={styles.upperText2}>Zero walls fitness is the meeting place between those who love fitness</Text>
-            <TouchableOpacity style={styles.buttoncontainer2}>
+            <TouchableOpacity >
               <Text style={styles.buttontext}>SIGNUP NOW!</Text>
             </TouchableOpacity>
           </View>
@@ -78,11 +78,11 @@ export default class extends Component {
             <Text style={styles.upperText3}>Most Recent Classes</Text>
             <FlatListSlider
             data={this.state.data}
-            width={275}
+            width={175}
             indicator = {false}
             component={<Preview />}
             autoscroll = {false}
-            onPress={item => alert(JSON.stringify(item))}
+            onPress={item => alert("Most Recent Classes")}
             contentContainerStyle={styles.contentStyle}
           />
           </View>
@@ -95,7 +95,7 @@ export default class extends Component {
             indicator = {false}
             component={<Preview />}
             autoscroll = {false}
-            onPress={item => alert(JSON.stringify(item))}
+            onPress={item => alert("Feature Classes")}
             contentContainerStyle={styles.contentStyle}
           />
           </View>
@@ -108,9 +108,80 @@ export default class extends Component {
             indicator = {false}
             component={<Preview />}
             autoscroll = {false}
-            onPress={item => alert(JSON.stringify(item))}
+            onPress={item => alert("Popular classes")}
             contentContainerStyle={styles.contentStyle}
           />
+          </View>
+
+          <View style={styles.container3}>
+            <Text style={styles.upperText1}>READY TO GET STARTED</Text>
+            <Text style={styles.upperText2}>Create an account to book classes or attend event.</Text>
+
+            <View style={styles.container5}>
+              <TouchableOpacity style={styles.buttoncontainer2}>
+                <Text style={styles.buttontext}>SIGNUP NOW!</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.buttoncontainer3}>
+                <Text style={styles.buttontext}>SUPPORT</Text>
+              </TouchableOpacity>
+            </View>            
+          </View>
+
+          <View style={styles.container4}>
+
+            <View style={styles.container6}>
+              <Text style={styles.text3}>Menu</Text>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Home</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Single class</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Instructor</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Support / FAQs</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Studio info</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.container6}>
+              <Text style={styles.text3}>Legal</Text>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Privacy</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Term</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.container6}>
+            <Text style={styles.text3}>Connect</Text>
+
+            <TouchableOpacity>
+                  <Text style={styles.buttontext3}>About</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Twitter</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <Text style={styles.buttontext3}>Instagram</Text>
+              </TouchableOpacity>
+            </View>
+            
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -150,23 +221,57 @@ const styles = StyleSheet.create({
   color:'#000000',
   fontSize:15
 },
+buttontext3:{
+  textAlign:'center',
+  color:'#808080',
+  fontSize:15
+},
 buttontext2:{
   textAlign:'center',
   color:'#00ff00',
   fontSize:35
 },
+text3:{
+  textAlign:'center',
+  color:'#ffffff',
+  fontSize:19,
+  marginBottom: 10
+},
 container2:{
   marginTop:20,
   backgroundColor:'#000000',
 },
-buttoncontainer:{
-  position: 'absolute',
+container3:{
+  backgroundColor:'#fed8b1',
+  alignItems: 'center',
+},
+container4:{
+  backgroundColor:'#000000',
+  flexDirection: 'row',
+  justifyContent: 'center'
+},
+container5:{
+  flexDirection: 'row',
+  justifyContent : 'center',
+  marginBottom:30
+},
+container6:{
+  marginLeft: 20
+},
+buttoncontainer2:{
   height:50,
   borderRadius:50,
-  backgroundColor:'#800080',
-  paddingVertical:10,
-  justifyContent:'center',
-  marginBottom:1,
+  backgroundColor : '#ffffff',
   width: "30%",
+  justifyContent: 'center'
+
+},
+buttoncontainer3:{
+  height:50,
+  borderRadius:50,
+  backgroundColor:'#ffffff',
+  marginLeft:20,
+  width: "30%",
+  justifyContent: 'center'
 }
 });
