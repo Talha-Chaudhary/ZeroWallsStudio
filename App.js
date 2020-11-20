@@ -78,7 +78,7 @@ export default class extends Component {
             <Text style={styles.upperText3}>Most Recent Classes</Text>
             <FlatListSlider
             data={this.state.data}
-            width={175}
+            width={275}
             indicator = {false}
             component={<Preview />}
             autoscroll = {false}
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     textAlign:'center',
     color:'#000000',
     fontSize:20,
-    marginTop:10
+    marginTop:30
  },
  upperText2:{
     textAlign:'center',
@@ -235,7 +235,8 @@ text3:{
   textAlign:'center',
   color:'#ffffff',
   fontSize:19,
-  marginBottom: 10
+  marginBottom: 10,
+  marginTop: 10
 },
 container2:{
   marginTop:20,

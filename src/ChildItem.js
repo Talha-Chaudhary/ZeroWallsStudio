@@ -19,7 +19,11 @@ export default (ChildItem = ({
         source={local ? item[imageKey] : {uri: item[imageKey]}}
       />
       <TouchableOpacity style={styles.buttoncontainer2}>
-      <IconAnt name={"home"} size={40} />
+        <IconAnt name={"menufold"} size={30} />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.buttoncontainer3}>
+        <IconAnt name={"search1"} size={30} />
       </TouchableOpacity>
     </TouchableOpacity>
   );
@@ -36,8 +40,19 @@ const styles = StyleSheet.create({
     height:50,
     borderRadius:50,
     paddingVertical:10,
-    justifyContent:'center',
+    alignSelf:'flex-end',
+    justifyContent: 'center',
     marginBottom:1,
-    width: "30%",
+    paddingRight:5
+  },
+  buttoncontainer3:{
+    position: 'absolute',
+    height:50,
+    borderRadius:50,
+    paddingVertical:10,
+    alignSelf:'flex-end',
+    justifyContent: 'center',
+    marginBottom:1,
+    paddingRight:50
   },
 });
