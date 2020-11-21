@@ -11,6 +11,7 @@ import {
 
 import Preview from './src/Preview';
 import FlatListSlider from './src/FlatListSlider'; 
+import IconAnt from 'react-native-vector-icons/AntDesign'
 
 export default class extends Component {
   constructor(props) {
@@ -69,13 +70,24 @@ export default class extends Component {
           <View style={styles.upperContainer}>
             <Text style={styles.upperText1}>ZERO WALLS FOR STUDIO</Text>
             <Text style={styles.upperText2}>Zero walls fitness is the meeting place between those who love fitness</Text>
-            <TouchableOpacity >
+            <TouchableOpacity  style={styles.opacitystyle}>
               <Text style={styles.buttontext}>SIGNUP NOW!</Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.container2}>
-            <Text style={styles.upperText3}>Most Recent Classes</Text>
+            <View style={styles.textContainer}>
+                <Text style={styles.upperTextorange}>MOST REACENT </Text>
+                <Text style={styles.upperText3}> CLASSES</Text>
+
+              <TouchableOpacity style={styles.arrowcontainer}>
+                <IconAnt name={"arrowleft"} size={30} />
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.arrowcontainer}>
+                <IconAnt name={"arrowright"} size={30} />
+              </TouchableOpacity>
+              </View>
             <FlatListSlider
             data={this.state.data}
             width={275}
@@ -88,7 +100,18 @@ export default class extends Component {
           </View>
 
           <View style={styles.container2}>
-            <Text style={styles.upperText3}>Feature Classes</Text>
+            <View style={styles.textContainer}>
+              <Text style={styles.upperTextorange}>FEATURED </Text>
+              <Text style={styles.upperText3}> CLASSES</Text>
+
+              <TouchableOpacity style={styles.arrowcontainer}>
+                <IconAnt name={"arrowleft"} size={30} />
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.arrowcontainer}>
+                <IconAnt name={"arrowright"} size={30} />
+              </TouchableOpacity>
+            </View>
             <FlatListSlider
             data={this.state.data}
             width={275}
@@ -101,7 +124,18 @@ export default class extends Component {
           </View>
 
           <View style={styles.container2}>
-            <Text style={styles.upperText3}>Most Popular Classes</Text>
+            <View style={styles.textContainer}>
+              <Text style={styles.upperTextorange}>MOST POPULAR </Text>
+              <Text style={styles.upperText3}> CLASSES</Text>
+
+              <TouchableOpacity style={styles.arrowcontainer}>
+                <IconAnt name={"arrowleft"} size={30} />
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.arrowcontainer}>
+                <IconAnt name={"arrowright"} size={30} />
+              </TouchableOpacity>
+            </View>
             <FlatListSlider
             data={this.state.data}
             width={275}
@@ -114,6 +148,10 @@ export default class extends Component {
           </View>
 
           <View style={styles.container3}>
+            <TouchableOpacity style={styles.arrowcontainer3}>
+                <IconAnt name={"mail"} size={30} />
+              </TouchableOpacity>
+
             <Text style={styles.upperText1}>READY TO GET STARTED</Text>
             <Text style={styles.upperText2}>Create an account to book classes or attend event.</Text>
 
@@ -183,6 +221,11 @@ export default class extends Component {
             </View>
             
           </View>
+          <View style={styles.textContainer2}>
+            <Text style={styles.bottomtext1}>Copyright @2020 </Text>
+            <Text style={styles.bottomtext2}> zerowallsfitness.com.</Text>
+            <Text style={styles.bottomtext3}> All Rights Reserved.</Text>
+          </View>
         </ScrollView>
       </SafeAreaView>
     );
@@ -202,24 +245,63 @@ const styles = StyleSheet.create({
     fontSize:20,
     marginTop:30
  },
+  textContainer:{
+    flexDirection:'row'
+ },
+ textContainer2:{
+    flexDirection:'row',
+    backgroundColor:'#000000',
+    
+},
  upperText2:{
     textAlign:'center',
     color:'#000000',
     fontSize:10,
     marginBottom:30
  },
+ bottomtext1:{
+   marginLeft:20,
+  color:'#ffffff',
+  fontSize:10,
+  marginTop:10
+},
+bottomtext3:{
+ color:'#ffffff',
+ fontSize:10,
+ marginTop:10
+},
+bottomtext2:{
+  color:'#fed8b1',
+  fontSize:7,
+  marginTop:10
+  
+},
+ upperTextorange:{
+  textAlign:'center',
+  color:'#fed8b1',
+  fontSize:15,
+  marginTop:30,
+  marginLeft: 10
+},
  upperText3:{
   textAlign:'left',
   color:'#ffffff',
-  fontSize:20,
+  fontSize:15,
   marginBottom: 1,
-  marginLeft: 20,
   marginTop:30
 },
- buttontext:{
+buttontext:{
   textAlign:'center',
   color:'#000000',
-  fontSize:15
+  fontSize:15,
+},
+opacitystyle:{
+  borderColor: '#000000',
+  borderWidth: 1,
+  borderRadius: 4,
+  width:"30%",
+  alignSelf:'center',
+  marginBottom:20
 },
 buttontext3:{
   textAlign:'center',
@@ -274,5 +356,31 @@ buttoncontainer3:{
   marginLeft:20,
   width: "30%",
   justifyContent: 'center'
-}
+},
+arrowcontainer:{
+  // width:"10%",
+  backgroundColor:'#ffffff',
+  // height:"25%",
+  justifyContent:'flex-end',
+  alignSelf:'flex-end',
+
+},
+arrowcontainer2:{
+  // width:"10%",
+  backgroundColor:'#ffffff',
+  // height:"25%",
+  alignSelf:'flex-end',
+  justifyContent:'flex-end',
+  marginLeft:200,
+
+},
+arrowcontainer3:{
+  // width:"10%",
+  backgroundColor:'#228B22',
+  // height:"25%",
+  alignSelf:'flex-end',
+  justifyContent:'flex-end',
+  marginLeft:10,
+
+},
 });
