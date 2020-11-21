@@ -7,9 +7,12 @@ import {
   Platform,
   UIManager,
   Dimensions,
+  TouchableOpacity,
 } from 'react-native';
 import Indicator from './Indicator';
 import ChildItem from './ChildItem';
+import IconAnt from 'react-native-vector-icons/AntDesign'
+
 
 export default class FlatListSlider extends Component {
   slider = createRef();
@@ -120,6 +123,13 @@ export default class FlatListSlider extends Component {
             style={{...styles.indicator, ...this.props.indicatorStyle}}
           />
         )}
+        <TouchableOpacity style={styles.buttoncontainer2}>
+        <IconAnt name={"menufold"} size={20} />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.buttoncontainer3}>
+        <IconAnt name={"search1"} size={20} />
+      </TouchableOpacity>
       </View>
     );
   };
@@ -179,6 +189,26 @@ const styles = StyleSheet.create({
   image: {
     height: 230,
     resizeMode: 'stretch',
+  },
+  buttoncontainer2:{
+    position: 'absolute',
+    height:50,
+    borderRadius:50,
+    paddingVertical:10,
+    alignSelf:'flex-end',
+    justifyContent: 'center',
+    marginBottom:1,
+    paddingRight:5
+  },
+  buttoncontainer3:{
+    position: 'absolute',
+    height:50,
+    borderRadius:50,
+    paddingVertical:1,
+    alignSelf:'flex-end',
+    justifyContent: 'center',
+    marginBottom:1,
+    paddingRight:40
   },
   indicatorContainerStyle: {
     marginTop: 18,

@@ -13,6 +13,7 @@ import Preview from './src/Preview';
 import FlatListSlider from './src/FlatListSlider'; 
 import IconAnt from 'react-native-vector-icons/AntDesign'
 
+
 export default class extends Component {
   constructor(props) {
     super(props);
@@ -80,13 +81,13 @@ export default class extends Component {
                 <Text style={styles.upperTextorange}>MOST REACENT </Text>
                 <Text style={styles.upperText3}> CLASSES</Text>
 
-              <TouchableOpacity style={styles.arrowcontainer}>
-                <IconAnt name={"arrowleft"} size={30} />
-              </TouchableOpacity>
+                <TouchableOpacity style={styles.arrowcontainer}>
+                  <IconAnt name={"left"} size={20} />
+                </TouchableOpacity>
 
-              <TouchableOpacity style={styles.arrowcontainer}>
-                <IconAnt name={"arrowright"} size={30} />
-              </TouchableOpacity>
+                <TouchableOpacity style={styles.arrowcontainer}>
+                  <IconAnt name={"right"} size={20} />
+                </TouchableOpacity>
               </View>
             <FlatListSlider
             data={this.state.data}
@@ -102,14 +103,14 @@ export default class extends Component {
           <View style={styles.container2}>
             <View style={styles.textContainer}>
               <Text style={styles.upperTextorange}>FEATURED </Text>
-              <Text style={styles.upperText3}> CLASSES</Text>
+              <Text style={styles.upperText4}> CLASSES</Text>
 
               <TouchableOpacity style={styles.arrowcontainer}>
-                <IconAnt name={"arrowleft"} size={30} />
+                <IconAnt name={"left"} size={20} />
               </TouchableOpacity>
 
               <TouchableOpacity style={styles.arrowcontainer}>
-                <IconAnt name={"arrowright"} size={30} />
+                <IconAnt name={"right"} size={20} />
               </TouchableOpacity>
             </View>
             <FlatListSlider
@@ -129,11 +130,11 @@ export default class extends Component {
               <Text style={styles.upperText3}> CLASSES</Text>
 
               <TouchableOpacity style={styles.arrowcontainer}>
-                <IconAnt name={"arrowleft"} size={30} />
+                <IconAnt name={"left"} size={20} />
               </TouchableOpacity>
 
               <TouchableOpacity style={styles.arrowcontainer}>
-                <IconAnt name={"arrowright"} size={30} />
+                <IconAnt name={"right"} size={20} />
               </TouchableOpacity>
             </View>
             <FlatListSlider
@@ -288,7 +289,16 @@ bottomtext2:{
   color:'#ffffff',
   fontSize:15,
   marginBottom: 1,
-  marginTop:30
+  marginTop:30,
+  paddingRight:120
+},
+upperText4:{
+  textAlign:'left',
+  color:'#ffffff',
+  fontSize:15,
+  marginBottom: 1,
+  marginTop:30,
+  paddingRight:160
 },
 buttontext:{
   textAlign:'center',
@@ -364,6 +374,7 @@ arrowcontainer:{
   justifyContent:'flex-end',
   alignSelf:'flex-end',
 
+
 },
 arrowcontainer2:{
   // width:"10%",
@@ -371,7 +382,7 @@ arrowcontainer2:{
   // height:"25%",
   alignSelf:'flex-end',
   justifyContent:'flex-end',
-  marginLeft:200,
+  // paddingStart:10
 
 },
 arrowcontainer3:{
@@ -381,6 +392,7 @@ arrowcontainer3:{
   alignSelf:'flex-end',
   justifyContent:'flex-end',
   marginLeft:10,
+  paddingLeft:10,
 
 },
 });
